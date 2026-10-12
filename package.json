@@ -1,0 +1,43 @@
+{
+  "name": "roadmap-certificacoes",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate:catalog": "vitest run src/catalog/data.test.ts src/catalog/validation.test.ts",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test",
+    "validate": "npm test && npm run validate:catalog && npm run test:e2e && npm run lint && npm run typecheck && npm run build"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^10.12.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.0",
+    "globals": "^17.0.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.71.1",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.3"
+  },
+  "engines": {
+    "node": "^22.13.0 || ^24.0.0 || >=26.0.0"
+  }
+}
